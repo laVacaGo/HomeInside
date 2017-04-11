@@ -5,6 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "rodrigo.sdm.com.homeinside"
+      //  vectorDrawables.useSupportLibrary= true
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
