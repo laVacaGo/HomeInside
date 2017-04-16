@@ -1,20 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:stretchColumns="*"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="rodrigo.sdm.com.homeinside.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hey k pasa!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TableRow>
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/casa_todo"
+            android:layout_span="3"
+            />
+    </TableRow>
+    <TableRow>
+        <ImageButton
+            android:id="@+id/button_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_alert" />
+        <ImageButton
+            android:onClick="buttonOnClicked"
+            android:id="@+id/button_iluminacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_alert"
+            />
+        <ImageButton
+            android:id="@+id/button_temperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_alert"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scroll_general"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scroll_ilum"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:text="@string/scroll_temp"
+            android:textAlignment="center"
+            />
 
-</android.support.constraint.ConstraintLayout>
+    </TableRow>
+    <TableRow>
+        <ImageButton
+            android:id="@+id/button_persianas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_alert"
+            />
+        <ImageButton
+            android:id="@+id/button_jardin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_alert"
+            />
+        <ImageButton
+            android:id="@+id/button_meteo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_alert"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scroll_pers"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scroll_jardin"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scroll_meteo"
+            android:lines="2"
+            android:textAlignment="center"
+            />
+    </TableRow>
+    <TableRow>
+        <ImageButton
+            android:id="@+id/button_eventos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_alert"
+            />
+        <ImageButton
+            android:id="@+id/button_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_alert"
+            />
+        <ImageButton
+            android:id="@+id/button_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_alert"
+            />
+    </TableRow>
+    <TableRow>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scroll_eventos"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scroll_tools"
+        android:lines="2"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scroll_about"
+        android:textAlignment="center"
+        />
+    </TableRow>
+
+</TableLayout>

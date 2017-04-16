@@ -1,5 +1,6 @@
 package rodrigo.sdm.com.homeinside;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -42,6 +44,18 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void buttonOnClicked(View v){
+        int id= v.getId();
+        Intent intent;
+        switch (id){
+            case R.id.button_general:
+                break;
+            case R.id.button_iluminacion:
+                intent= new Intent(this,IluminacionActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -79,20 +93,25 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Intent intent;
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+       if (id == R.id.nav_iluminacion) {
+           intent= new Intent(this, IluminacionActivity.class);
+           startActivity(intent);
 
-        } else if (id == R.id.nav_slideshow) {
+        }/* else if (id == R.id.MainActivty.class) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_persianas) {
+
+        } else if (id == R.id.nav_camara) {
+            Intent intent=new Intent(this,CamaraActivity.class);
+
+        } else if (id == R.id.nav_tools) {
+            Intent intent=new Intent(this,SettingsActivity.class);
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
-
-        }
+        }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
