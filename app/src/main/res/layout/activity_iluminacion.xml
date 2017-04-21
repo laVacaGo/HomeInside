@@ -1,9 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context="rodrigo.sdm.com.homeinside.IluminacionActivity">
+    <TableRow
+        android:background="@drawable/iluminacion_foto_principal2"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+    </TableRow>
 
-</android.support.constraint.ConstraintLayout>
+    <TableRow
+        android:layout_marginBottom="20dp">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/mano_bombilla" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="@string/scroll_ilum"/>
+        </TableRow>
+    <TableRow>
+    <TextView
+        android:id="@+id/tv_habitacion1"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/habitacion_cocina"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/tv_habitacion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_gravity="left"
+            android:text=""/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/tv_habitacion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_gravity="left"
+            android:text=""/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/tv_habitacion4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_gravity="left"
+            android:text=""/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/tv_habitacion5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_gravity="left"
+            android:text=""/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/tv_habitacion6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_gravity="left"
+            android:text=""/>
+    </TableRow>
+</TableLayout>

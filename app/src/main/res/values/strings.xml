@@ -9,7 +9,7 @@
     <string name="imageViewSplashScreen">Imagen de transicion de inicio de la app</string>
 
     <string name="scroll_temp">Temperatura</string>
-    <string name="scroll_ilum">Ilumincación</string>
+    <string name="scroll_ilum">Iluminación</string>
     <string name="scroll_pers">Persianas</string>
     <string name="scroll_tools">Configuración</string>
     <string name="scroll_general">General</string>
@@ -22,5 +22,12 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="habitacion_salon">SALÓN</string>
+    <string name="habitacion_cocina">COCINA</string>
+    <string name="habitacion_bano">BAÑO</string>
+    <string name="habitacion_pasillo">PASILLO</string>
+    <string name="habitacion_principal">HAB. PRINCIPAL</string>
+    <string name="habitacion_invitados">HAB. INVITADOS</string>
 </resources>
 
