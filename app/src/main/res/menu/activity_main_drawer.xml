@@ -8,7 +8,7 @@
             android:title="@string/scroll_general" />
         <item
             android:id="@+id/nav_iluminacion"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@mipmap/bombilla_redonda"
             android:title="@string/scroll_ilum" />
         <item
             android:id="@+id/nav_tempertura"
