@@ -1,6 +1,8 @@
 package rodrigo.sdm.com.homeinside;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -13,9 +15,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 public class IluminacionActivity extends AppCompatActivity {
 
+    protected boolean prueba=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +39,17 @@ public class IluminacionActivity extends AppCompatActivity {
 
     }
 
+    public void onClickBombilla(View v){
+        ImageView image=(ImageView) v;
+        if(prueba){
+            image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
+            prueba=false;
+        }
+        else {
+            image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
+            prueba=true;
+        }
+    }
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
