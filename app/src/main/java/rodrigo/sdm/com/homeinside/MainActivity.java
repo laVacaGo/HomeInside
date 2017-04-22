@@ -55,6 +55,14 @@ public class MainActivity extends AppCompatActivity
                 intent= new Intent(this,IluminacionActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.button_config:
+                intent=new Intent(this,ConfiguracionActivity.class);
+                startActivity(intent);
+                break;
+            case  R.id.button_about:
+                intent=new Intent(this,AboutActivity.class);
+                startActivity(intent);
+                break;
         }
     }
     @Override
@@ -100,11 +108,13 @@ public class MainActivity extends AppCompatActivity
            intent= new Intent(this, IluminacionActivity.class);
            startActivity(intent);
 
-        }/* else if (id == R.id.MainActivty.class) {
-
-        } else if (id == R.id.nav_persianas) {
-
-        } else if (id == R.id.nav_camara) {
+        } else if (id == R.id.nav_tools) {
+           intent= new Intent(this, ConfiguracionActivity.class);
+           startActivity(intent);
+        } else if (id == R.id.nav_about) {
+           intent= new Intent(this, AboutActivity.class);
+           startActivity(intent);
+        } /*else if (id == R.id.nav_camara) {
             Intent intent=new Intent(this,CamaraActivity.class);
 
         } else if (id == R.id.nav_tools) {

@@ -23,11 +23,19 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
-    <string name="habitacion_salon">SALÓN</string>
-    <string name="habitacion_cocina">COCINA</string>
-    <string name="habitacion_bano">BAÑO</string>
-    <string name="habitacion_pasillo">PASILLO</string>
-    <string name="habitacion_principal">HAB. PRINCIPAL</string>
-    <string name="habitacion_invitados">HAB. INVITADOS</string>
+    <string name="habitacion_salon">Salón</string>
+    <string name="habitacion_cocina">Cocina</string>
+    <string name="habitacion_bano">Baño</string>
+    <string name="habitacion_pasillo">Pasillo</string>
+    <string name="habitacion_principal">Hab. principal</string>
+    <string name="habitacion_invitados">Hab. invitados</string>
+
+    <string name="colaboradores">Colaboradores</string>
+
+    <string name="login">Identificarse</string>
+    <string name="usuario">Usuario</string>
+    <string name="hintUsuario">Introduzca su usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="hintPassword">Introduzca su contraseña</string>
 </resources>
 

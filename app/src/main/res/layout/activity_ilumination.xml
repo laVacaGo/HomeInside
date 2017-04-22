@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="rodrigo.sdm.com.homeinside.IluminacionActivity"
+    >
+
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#ffffff"
-    android:stretchColumns="*"
-    tools:context="rodrigo.sdm.com.homeinside.IluminacionActivity">
+    android:stretchColumns="*">
     <TableRow
         android:background="@drawable/iluminacion_foto_principal2"
         android:layout_height="match_parent"
@@ -27,8 +31,6 @@
     </TableRow>
     <TableRow
         android:layout_marginBottom="15dp">
-
-
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -48,6 +50,7 @@
 
                     android:text="@string/habitacion_salon"/>
                 <ImageView
+                    android:id="@+id/bombilla1"
                     android:onClick="onClickBombilla"
                     android:layout_width="match_parent"
                     android:layout_weight="1"
@@ -77,6 +80,7 @@
                 android:layout_gravity="center"
                 android:text="@string/habitacion_cocina"/>
             <ImageView
+                android:id="@+id/bombilla2"
                 android:onClick="onClickBombilla"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
@@ -106,6 +110,7 @@
                 android:layout_gravity="center"
                 android:text="@string/habitacion_principal"/>
             <ImageView
+                android:id="@+id/bombilla3"
                 android:onClick="onClickBombilla"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
@@ -135,11 +140,12 @@
                 android:layout_gravity="center"
                 android:text="@string/habitacion_bano"/>
             <ImageView
+                android:id="@+id/bombilla4"
                 android:onClick="onClickBombilla"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:src="@mipmap/bombilla_apagada_redonda"
                 />
         </LinearLayout>
@@ -164,6 +170,7 @@
                 android:layout_gravity="center"
                 android:text="@string/habitacion_invitados"/>
             <ImageView
+                android:id="@+id/bombilla5"
                 android:onClick="onClickBombilla"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
@@ -174,3 +181,4 @@
         </LinearLayout>
     </TableRow>
 </TableLayout>
+</ScrollView>
