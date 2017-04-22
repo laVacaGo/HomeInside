@@ -4,31 +4,31 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_general"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/home"
             android:title="@string/scroll_general" />
         <item
             android:id="@+id/nav_iluminacion"
-            android:icon="@mipmap/bombilla_redonda"
+            android:icon="@drawable/bombilla"
             android:title="@string/scroll_ilum" />
         <item
             android:id="@+id/nav_tempertura"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/temperatura"
             android:title="@string/scroll_temp" />
         <item
             android:id="@+id/nav_pers"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/persianas"
             android:title="@string/scroll_pers" />
         <item
             android:id="@+id/nav_jardin"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/jardin"
             android:title="@string/scroll_jardin" />
         <item
             android:id="@+id/nav_meteo"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/meteo"
             android:title="@string/scroll_meteo" />
         <item
             android:id="@+id/nav_eventos"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/eventos"
             android:title="@string/scroll_eventos" />
     </group>
 
@@ -36,12 +36,12 @@
         <menu>
             <item
                 android:id="@+id/nav_tools"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/config"
                 android:title="@string/scroll_tools" />
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_about"
+                android:icon="@drawable/about"
+                android:title="@string/scroll_about" />
 
         </menu>
     </item>

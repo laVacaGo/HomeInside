@@ -45,8 +45,9 @@
         <ImageButton
             android:id="@+id/button_general"
             android:layout_width="match_parent"
+            android:background="#ffffff"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_alert" />
+            android:src="@mipmap/home_redondo" />
         <ImageButton
             android:background="#ffffff"
             android:onClick="buttonOnClicked"
@@ -57,9 +58,10 @@
             />
         <ImageButton
             android:id="@+id/button_temperatura"
+            android:background="#ffffff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_alert"
+            android:src="@mipmap/temperatura_redonda"
             />
     </TableRow>
     <TableRow>
@@ -92,19 +94,22 @@
             android:id="@+id/button_persianas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_alert"
+            android:background="#ffffff"
+            android:src="@mipmap/persianas_redododo"
             />
         <ImageButton
             android:id="@+id/button_jardin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_alert"
+            android:background="#ffffff"
+            android:src="@mipmap/jardin_redondo"
             />
         <ImageButton
             android:id="@+id/button_meteo"
             android:layout_width="match_parent"
+            android:background="#ffffff"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_alert"
+            android:src="@mipmap/meteo_redondo"
             />
     </TableRow>
     <TableRow>
@@ -136,19 +141,22 @@
             android:id="@+id/button_eventos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_alert"
+            android:background="#ffffff"
+            android:src="@mipmap/eventos_redondos"
             />
         <ImageButton
             android:id="@+id/button_config"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_alert"
+            android:background="#ffffff"
+            android:src="@mipmap/config_redondo"
             />
         <ImageButton
             android:id="@+id/button_about"
             android:layout_width="match_parent"
+            android:background="#ffffff"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_alert"
+            android:src="@mipmap/about_redondo"
             />
     </TableRow>
     <TableRow>
