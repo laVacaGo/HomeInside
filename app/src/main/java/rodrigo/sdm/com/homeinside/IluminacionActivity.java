@@ -27,11 +27,14 @@ public class IluminacionActivity extends AppCompatActivity {
     protected boolean luz3;
     protected boolean luz4;
     protected boolean luz5;
+    protected boolean luz6;
+    protected boolean luz7;
+    protected boolean luz8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ilumination);
+        setContentView(R.layout.activity_iluminacion);
 
         /*LayoutInflater inflater = (LayoutInflater) getApplicationContext()
                 .getSystemService(this.LAYOUT_INFLATER_SERVICE);
@@ -40,55 +43,60 @@ public class IluminacionActivity extends AppCompatActivity {
 
 
         SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        luz1=preferences.getBoolean("habitacion1",false);
-        luz2=preferences.getBoolean("habitacion2",false);
-        luz3=preferences.getBoolean("habitacion3",false);
-        luz4=preferences.getBoolean("habitacion4",false);
-        luz5=preferences.getBoolean("habitacion5",false);
+        luz1=preferences.getBoolean("salon1",false);
+        luz2=preferences.getBoolean("salon2",false);
+        luz3=preferences.getBoolean("cocina",false);
+        luz4=preferences.getBoolean("habitacionPrincipal1",false);
+        luz5=preferences.getBoolean("habitacionPrincipal2",false);
+        luz6=preferences.getBoolean("bano",false);
+        luz7=preferences.getBoolean("habitacionSecundaria1",false);
+        luz8=preferences.getBoolean("habitacionSecundaria2",false);
 
-        ImageView image1=(ImageView) findViewById(R.id.bombilla1);
+        ImageView image1=(ImageView) findViewById(R.id.salon_principal);
         if(luz1) image1.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
         else  image1.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
 
-        ImageView image2=(ImageView) findViewById(R.id.bombilla2);
+        ImageView image2=(ImageView) findViewById(R.id.salon_secundaria);
         if(luz2) image2.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
         else  image2.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
 
-        ImageView image3=(ImageView) findViewById(R.id.bombilla3);
+        ImageView image3=(ImageView) findViewById(R.id.cocina);
         if(luz3) image3.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
         else  image3.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
 
-        ImageView image4=(ImageView) findViewById(R.id.bombilla4);
+        ImageView image4=(ImageView) findViewById(R.id.habit_prin_central);
         if(luz4) image4.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
         else  image4.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
 
-        ImageView image5=(ImageView) findViewById(R.id.bombilla5);
+        ImageView image5=(ImageView) findViewById(R.id.habit_prin_secundaria);
         if(luz5) image5.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
         else  image5.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
 
+        ImageView image6=(ImageView) findViewById(R.id.bano);
+        if(luz6) image6.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
+        else  image6.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
 
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        ImageView image7=(ImageView) findViewById(R.id.habit_sec_central);
+        if(luz7) image7.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
+        else  image7.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-
+        ImageView image8=(ImageView) findViewById(R.id.habit_sec_sec);
+        if(luz8) image8.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
+        else  image8.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
     }
+
     @Override
     public void onPause(){
         SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor= preferences.edit();
-        editor.putBoolean("habitacion1", luz1);
-        editor.putBoolean("habitacion2", luz2);
-        editor.putBoolean("habitacion3", luz3);
-        editor.putBoolean("habitacion4", luz4);
-        editor.putBoolean("habitacion5", luz5);
+        editor.putBoolean("salon1", luz1);
+        editor.putBoolean("salon2", luz2);
+        editor.putBoolean("cocina", luz3);
+        editor.putBoolean("habitacionPrincipal1", luz4);
+        editor.putBoolean("habitacionPrincipal2", luz5);
+        editor.putBoolean("bano", luz6);
+        editor.putBoolean("habitacionSecundaria1", luz7);
+        editor.putBoolean("habitacionSecundaria2", luz8);
 
         editor.apply();
         super.onPause();
@@ -96,18 +104,21 @@ public class IluminacionActivity extends AppCompatActivity {
     @Override
     public void onResume(){
         SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        luz1=preferences.getBoolean("habitacion1",false);
-        luz2=preferences.getBoolean("habitacion2",false);
-        luz3=preferences.getBoolean("habitacion3",false);
-        luz4=preferences.getBoolean("habitacion4",false);
-        luz5=preferences.getBoolean("habitacion5",false);
+        luz1=preferences.getBoolean("salon1",false);
+        luz2=preferences.getBoolean("salon2",false);
+        luz3=preferences.getBoolean("cocina",false);
+        luz4=preferences.getBoolean("habitacionPrincipal1",false);
+        luz5=preferences.getBoolean("habitacionPrincipal2",false);
+        luz6=preferences.getBoolean("bano",false);
+        luz7=preferences.getBoolean("habitacionSecundaria1",false);
+        luz8=preferences.getBoolean("habitacionSecundaria2",false);
         super.onResume();
     }
     public void onClickBombilla(View v){
         ImageView image=(ImageView) v;
         int id= v.getId();
         switch (id){
-            case R.id.bombilla1:
+            case R.id.salon_principal:
                 if(luz1){
                     image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
                     luz1=false;}
@@ -115,7 +126,7 @@ public class IluminacionActivity extends AppCompatActivity {
                     image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
                     luz1=true;};
                 break;
-            case R.id.bombilla2:
+            case R.id.salon_secundaria:
                 if(luz2){
                     image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
                     luz2=false;}
@@ -123,7 +134,7 @@ public class IluminacionActivity extends AppCompatActivity {
                     image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
                     luz2=true;};
                 break;
-            case R.id.bombilla3:
+            case R.id.cocina:
                 if(luz3){
                     image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
                     luz3=false;}
@@ -131,7 +142,7 @@ public class IluminacionActivity extends AppCompatActivity {
                     image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
                     luz3=true;};
                 break;
-            case R.id.bombilla4:
+            case R.id.habit_prin_central:
                 if(luz4){
                     image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
                     luz4=false;}
@@ -139,13 +150,37 @@ public class IluminacionActivity extends AppCompatActivity {
                     image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
                     luz4=true;};
                 break;
-            case R.id.bombilla5:
+            case R.id.habit_prin_secundaria:
                 if(luz5){
                     image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
                     luz5=false;}
                 else{
                     image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
                     luz5=true;};
+                break;
+            case R.id.bano:
+                if(luz6){
+                    image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
+                    luz6=false;}
+                else{
+                    image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
+                    luz6=true;};
+                break;
+            case R.id.habit_sec_central:
+                if(luz7){
+                    image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
+                    luz7=false;}
+                else{
+                    image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
+                    luz7=true;};
+                break;
+            case R.id.habit_sec_sec:
+                if(luz8){
+                    image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
+                    luz8=false;}
+                else{
+                    image.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
+                    luz8=true;};
                 break;
         }
     }
