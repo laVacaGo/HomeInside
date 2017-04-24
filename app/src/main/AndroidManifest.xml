@@ -13,7 +13,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -27,8 +26,16 @@
         <activity
             android:name=".ConfiguracionActivity"
             android:label="@string/scroll_tools" />
+
         <activity android:name=".AboutActivity"
             android:label="@string/scroll_about"></activity>
+
+        <activity android:name=".WeatherActivity"
+            android:label="Meteorologia"></activity>
+
+        <activity android:name=".PPersianaActivity"
+            android:label="Persiana"></activity>
+
     </application>
 
 </manifest>

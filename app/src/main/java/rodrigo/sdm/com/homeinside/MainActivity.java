@@ -63,6 +63,10 @@ public class MainActivity extends AppCompatActivity
                 intent=new Intent(this,AboutActivity.class);
                 startActivity(intent);
                 break;
+            case  R.id.button_persianas:
+                intent=new Intent(this,PPersianaActivity.class);
+                startActivity(intent);
+                break;
         }
     }
     @Override
