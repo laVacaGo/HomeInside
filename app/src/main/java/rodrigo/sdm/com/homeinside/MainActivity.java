@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -61,6 +62,10 @@ public class MainActivity extends AppCompatActivity
                 break;
             case  R.id.button_about:
                 intent=new Intent(this,AboutActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_temperatura:
+                intent = new Intent(this,TemperaturaActivity.class);
                 startActivity(intent);
                 break;
         }
