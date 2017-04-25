@@ -28,11 +28,11 @@ public class TemperaturaViewHolder extends RecyclerView.ViewHolder {
     }
 
     //valor que tienes en la clase y los maqueta
-    public void updateUI(final Temperatura tmp, final int pos){
-        title.setText(tmp.getTitle());
+    public void updateUI(final Temperatura tmpe, final int pos){
+        title.setText(tmpe.getTitle());
         numberPicker.setMaxValue(30);
         numberPicker.setMinValue(18);
-        numberPicker.setValue(tmp.getTemperatura());
+        numberPicker.setValue(tmpe.getTemperatura());
         numberPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
