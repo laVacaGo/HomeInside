@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/titleActivity"
-        android:textSize="20dp"
-        android:text="Control de temperaturas del hogar"
+        android:textSize="30dp"
+        android:text="Control de Temperatura"
         android:gravity="center"
         android:textStyle="normal|bold" />
     <android.support.v7.widget.RecyclerView
