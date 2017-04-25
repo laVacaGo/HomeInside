@@ -98,7 +98,12 @@ public class PPersianaActivity extends AppCompatActivity {
                 if (p_1 == 0) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.bajadapersiana));
                 }
-                Log.i("Cuanto vale p1 baja", p_1+"");
+                if (p_1 == 95) {
+                    View parent = (View) v.getParent();
+                    ((ImageView)parent.findViewById(R.id.psubeCocina)).setImageDrawable(
+                            getResources().getDrawable(R.drawable.subepersiana));
+                }
+                break;
             case R.id.psubeCocina:
                 if (p_1 < 100) {
                     p_1 = p_1 + 5;
@@ -106,7 +111,12 @@ public class PPersianaActivity extends AppCompatActivity {
                 if (p_1 == 100) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.subidapersiana));
                 }
-                Log.i("Cuanto vale p1 sube", p_1+"");
+                if (p_1 == 5) {
+                    View parent = (View) v.getParent();
+                    ((ImageView)parent.findViewById(R.id.pbajaCocina)).setImageDrawable(
+                            getResources().getDrawable(R.drawable.bajapersiana));
+                }
+                break;
             case R.id.pbajasalon:
                 if (p_2 > 0) {
                     p_2 = p_2 - 5;
@@ -114,7 +124,12 @@ public class PPersianaActivity extends AppCompatActivity {
                 if (p_2 == 0) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.bajadapersiana));
                 }
-
+                if (p_2 == 95) {
+                    View parent = (View) v.getParent();
+                    ((ImageView)parent.findViewById(R.id.psubesalon)).setImageDrawable(
+                            getResources().getDrawable(R.drawable.subepersiana));
+                }
+                break;
             case R.id.psubesalon:
                 if (p_2 < 100) {
                     p_2 = p_2 + 5;
@@ -122,6 +137,12 @@ public class PPersianaActivity extends AppCompatActivity {
                 if (p_2 == 100) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.subidapersiana));
                 }
+                if (p_2 == 5) {
+                    View parent = (View) v.getParent();
+                    ((ImageView)parent.findViewById(R.id.pbajasalon)).setImageDrawable(
+                            getResources().getDrawable(R.drawable.bajapersiana));
+                }
+                break;
             case R.id.pbajaHabitacion:
                 if (p_3 > 0) {
                     p_3 = p_3 - 5;
@@ -129,7 +150,12 @@ public class PPersianaActivity extends AppCompatActivity {
                 if (p_3 == 0) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.bajadapersiana));
                 }
-
+                if (p_3 == 95) {
+                    View parent = (View) v.getParent();
+                    ((ImageView)parent.findViewById(R.id.psubeHabitacion)).setImageDrawable(
+                            getResources().getDrawable(R.drawable.subepersiana));
+                }
+                break;
             case R.id.psubeHabitacion:
                 if (p_3 < 100) {
                     p_3 = p_3 + 5;
@@ -137,6 +163,12 @@ public class PPersianaActivity extends AppCompatActivity {
                 if (p_3 == 100) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.subidapersiana));
                 }
+                if (p_3 == 5) {
+                    View parent = (View) v.getParent();
+                    ((ImageView)parent.findViewById(R.id.pbajaHabitacion)).setImageDrawable(
+                            getResources().getDrawable(R.drawable.bajapersiana));
+                }
+                break;
             case R.id.pbajaInvitados:
                 if (p_4 > 0) {
                     p_4 = p_4 - 5;
@@ -144,7 +176,12 @@ public class PPersianaActivity extends AppCompatActivity {
                 if (p_4 == 0) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.bajadapersiana));
                 }
-
+                if (p_4 == 95) {
+                    View parent = (View) v.getParent();
+                    ((ImageView)parent.findViewById(R.id.psubesalon)).setImageDrawable(
+                            getResources().getDrawable(R.drawable.subepersiana));
+                }
+                break;
             case R.id.psubeInvitados:
                 if (p_4 < 100) {
                     p_4 = p_4 + 5;
@@ -152,6 +189,12 @@ public class PPersianaActivity extends AppCompatActivity {
                 if (p_4 == 100) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.subidapersiana));
                 }
+                if (p_4 == 5) {
+                    View parent = (View) v.getParent();
+                    ((ImageView)parent.findViewById(R.id.pbajasalon)).setImageDrawable(
+                            getResources().getDrawable(R.drawable.bajapersiana));
+                }
+                break;
         }
     }
 }

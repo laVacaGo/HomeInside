@@ -10,6 +10,8 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -26,7 +28,7 @@ public class GetWeatherAsyncTask extends AsyncTask<Void, Void, Weather> {
     public void setParent(WeatherActivity parent) {
         this.parent = parent;
     }
-    Weather result = null;
+    Weather wobject = new Weather();
     /*
         Access the web service in a background thread
     */
@@ -80,12 +82,15 @@ public class GetWeatherAsyncTask extends AsyncTask<Void, Void, Weather> {
             String humidity = result.getJSONObject("main").getString("humidity");
             String viento = result.getJSONObject("wind").getString("speed");
             JSONArray array = result.getJSONArray("weather");
-            String a = array.getJSONObject(0).getString("description");
+            String desc = array.getJSONObject(0).getString("description");
 
-            System.out.println(temp);
-            System.out.println(humidity);
-            System.out.println(viento);
-            System.out.println(a);
+            Double gradosK = Double.parseDouble(temp);
+            Double gradosC = (gradosK-273.15);
+            wobject.setTemperatura(round(gradosC,2));
+            wobject.setHumedad(Double.parseDouble(humidity));
+            wobject.setViento(Double.parseDouble(viento));
+            wobject.setPrecipitaciones(desc);
+
 
 } catch(Exception e){e.printStackTrace();}
 
@@ -103,7 +108,7 @@ public class GetWeatherAsyncTask extends AsyncTask<Void, Void, Weather> {
     }
 
     // Return the received Quotation object
-    return result;
+    return wobject;
 }
 
     /*
@@ -120,5 +125,12 @@ public class GetWeatherAsyncTask extends AsyncTask<Void, Void, Weather> {
             this.parent.resetWeather();
         }
         super.onPostExecute(param);
+    }
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 }

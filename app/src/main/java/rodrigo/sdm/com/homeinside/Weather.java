@@ -7,7 +7,7 @@ package rodrigo.sdm.com.homeinside;
 public class Weather {
     Double temperatura;
     Double humedad;
-    Double precipitaciones;
+    String precipitaciones;
     Double viento;
 
     public Double getTemperatura() {
@@ -26,11 +26,11 @@ public class Weather {
         this.humedad = humedad;
     }
 
-    public Double getPrecipitaciones() {
+    public String getPrecipitaciones() {
         return precipitaciones;
     }
 
-    public void setPrecipitaciones(Double precipitaciones) {
+    public void setPrecipitaciones(String precipitaciones) {
         this.precipitaciones = precipitaciones;
     }
 

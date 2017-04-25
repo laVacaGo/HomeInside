@@ -14,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import static rodrigo.sdm.com.homeinside.R.id.button_meteo;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -67,6 +69,11 @@ public class MainActivity extends AppCompatActivity
                 intent=new Intent(this,PPersianaActivity.class);
                 startActivity(intent);
                 break;
+            case  R.id.button_meteo:
+                intent=new Intent(this,WeatherActivity.class);
+                startActivity(intent);
+                break;
+
         }
     }
     @Override
