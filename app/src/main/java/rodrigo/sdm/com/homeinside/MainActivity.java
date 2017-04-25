@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity
                 intent=new Intent(this,AboutActivity.class);
                 startActivity(intent);
                 break;
+<<<<<<< HEAD
             case  R.id.button_persianas:
                 intent=new Intent(this,PPersianaActivity.class);
                 startActivity(intent);
@@ -74,6 +76,12 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
                 break;
 
+=======
+            case R.id.button_temperatura:
+                intent = new Intent(this,TemperaturaActivity.class);
+                startActivity(intent);
+                break;
+>>>>>>> origin/master
         }
     }
     @Override
