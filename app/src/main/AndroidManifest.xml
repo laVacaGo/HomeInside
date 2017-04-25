@@ -30,7 +30,6 @@
         <activity
             android:name=".ConfiguracionActivity"
             android:label="@string/scroll_tools" />
-<<<<<<< HEAD
 
         <activity android:name=".AboutActivity"
             android:label="@string/scroll_about"></activity>
@@ -41,15 +40,10 @@
         <activity android:name=".PPersianaActivity"
             android:label="Persiana"></activity>
 
-=======
-        <activity
-            android:name=".AboutActivity"
-            android:label="@string/scroll_about" />
         <activity
             android:name=".TemperaturaActivity"
             android:label="@string/title_activity_temperatura"
             android:theme="@style/AppTheme.NoActionBar"></activity>
->>>>>>> origin/master
     </application>
 
 </manifest>
