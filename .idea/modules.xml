@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HomeInside.iml" filepath="$PROJECT_DIR$/HomeInside.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/domoticaApp.iml" filepath="$PROJECT_DIR$/domoticaApp.iml" />
     </modules>

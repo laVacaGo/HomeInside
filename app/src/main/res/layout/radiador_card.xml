@@ -12,6 +12,9 @@
     card_view:cardCornerRadius="10dp"
     >
 
+
+    <!--CardView es una vista que se repetirá-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,7 +37,7 @@
             android:textSize="15dp"
             android:textAlignment="center"
             android:id="@+id/titleTemperatura"
-            />
+            android:textColor="@android:color/background_dark" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,7 +53,7 @@
                 android:textSize="15dp"
                 android:layout_gravity="center"
 
-                />
+                android:textColor="@android:color/background_dark" />
 
             <NumberPicker
                 android:layout_width="wrap_content"

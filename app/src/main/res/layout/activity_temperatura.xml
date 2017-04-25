@@ -12,7 +12,12 @@
         android:textSize="30dp"
         android:text="Control de Temperatura"
         android:gravity="center"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark" />
+
+    <!--RecyclerView Lista de vistas de Cardview, necesita
+    que se cree un Adapter y un ViewHolder-->
+
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/reciclerView"

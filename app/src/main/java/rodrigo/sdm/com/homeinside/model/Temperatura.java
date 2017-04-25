@@ -4,6 +4,8 @@ package rodrigo.sdm.com.homeinside.model;
  * Created by vicov on 24/04/2017.
  */
 
+//la clase que hay que maquetar.
+
 public class Temperatura {
     private String title;
 
