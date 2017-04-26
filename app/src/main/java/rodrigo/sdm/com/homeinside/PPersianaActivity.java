@@ -29,7 +29,7 @@ public class PPersianaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ppersiana);
 
-        SharedPreferences prefPersiana= PreferenceManager.getDefaultSharedPreferences(this);
+        /*SharedPreferences prefPersiana= PreferenceManager.getDefaultSharedPreferences(this);
         p_1 = prefPersiana.getInt("cocinaPersiana", 50);
         p_2 = prefPersiana.getInt("salonPersiana", 50);
         p_3 = prefPersiana.getInt("habitacionPersiana", 50);
@@ -65,7 +65,7 @@ public class PPersianaActivity extends AppCompatActivity {
         else if (p_4 == 100) {
             ImageView image1=(ImageView) findViewById(R.id.psubeInvitados);
             image1.setImageDrawable(getResources().getDrawable(R.drawable.subidapersiana));
-        }
+        }*/
     }
 
     public void setPorcentajePersiana(){
@@ -81,23 +81,23 @@ public class PPersianaActivity extends AppCompatActivity {
     }
     @Override
     public void onPause(){
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+       /* SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor= preferences.edit();
         editor.putInt("cocinaPersiana", p_1);
         editor.putInt("salonPersiana", p_2);
         editor.putInt("habitacionPersiana", p_3);
         editor.putInt("invitadosPersiana", p_4);
-        editor.apply();
+        editor.apply();*/
         super.onPause();
     }
     @Override
     public void onResume(){
-        SharedPreferences prefPersiana= PreferenceManager.getDefaultSharedPreferences(this);
+        /*SharedPreferences prefPersiana= PreferenceManager.getDefaultSharedPreferences(this);
         p_1 = prefPersiana.getInt("cocina", 50);
         p_2 = prefPersiana.getInt("salon", 50);
         p_3 = prefPersiana.getInt("habitacion", 50);
         p_4 = prefPersiana.getInt("invitados", 50);
-        setPorcentajePersiana();
+        setPorcentajePersiana();*/
         super.onResume();
     }
 

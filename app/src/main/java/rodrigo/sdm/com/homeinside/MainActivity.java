@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     protected DrawerLayout drawer;
+   /* protected TextView usuario= (TextView) findViewById(R.id.textViewUser);
+    protected TextView email= (TextView)findViewById(R.id.textViewEmail);*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,20 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        /*SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+        usuario.setText(preferences.getString("usuario_name","Usuario"));
+        email.setText(preferences.getString("email_name","Email"));*/
+    }
+    @Override
+    public void onStop(){
+        /*SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor= preferences.edit();
+        String aux=(String) usuario.getText();
+        editor.putString("usuario_name", aux);
+        aux=(String) email.getText();
+        editor.putString("email_name", aux);
+        editor.apply();*/
+        super.onStop();
     }
 
     public void buttonOnClicked(View v){
@@ -91,6 +107,16 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
                 break;
         }
+    }
+
+    @Override
+    public void onResume(){
+
+        /*SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+        usuario.setText(preferences.getString("usuario_name","Usuario"));
+        email.setText(preferences.getString("email_name","Email"));*/
+
+        super.onResume();
     }
 
 

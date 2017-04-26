@@ -4,16 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="rodrigo.sdm.com.homeinside.TemperaturaActivity">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/titleActivity"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:text="Control de Temperatura"
         android:gravity="center"
         android:textStyle="normal|bold"
-        android:textColor="@android:color/background_dark" />
+        android:textColor="#00516C" />
 
     <!--RecyclerView Lista de vistas de Cardview, necesita
     que se cree un Adapter y un ViewHolder-->

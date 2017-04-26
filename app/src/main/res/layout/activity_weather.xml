@@ -90,7 +90,7 @@
                     android:textSize="20dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:text="Humedad"/>
+                    android:text="Presión"/>
 
                 <LinearLayout
                     android:orientation="horizontal"

@@ -18,9 +18,9 @@ public class ConfiguracionActivity extends AppCompatActivity {
     }
     @Override
     protected void onPause(){
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+        /*SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor= preferences.edit();
-       /* editor.putString("usuario", );
+        editor.putString("usuario", );
         editor.putBoolean("password", );
         editor.putBoolean("cocina", luz3);*/
         super.onPause();
@@ -33,27 +33,21 @@ public class ConfiguracionActivity extends AppCompatActivity {
     }
 
     public void login (View view){
-        TextView user=(TextView) findViewById(R.id.textViewUser);
-        TextView email= (TextView) findViewById(R.id.textViewEmail);
-        TextView datosUser= (TextView) findViewById(R.id.user);
-        TextView datosEmail= (TextView) findViewById(R.id.email);
-        TextView pass= (TextView) findViewById(R.id.pass);
+        EditText datosUser= (EditText) findViewById(R.id.user);
+        EditText datosEmail= (EditText) findViewById(R.id.email);
+        EditText pass= (EditText) findViewById(R.id.pass);
+
+
         SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+        /*SharedPreferences.Editor editor= preferences.edit();
+        String aux=(String) datosUser.getText().toString();
+        editor.putString("usuario_name", aux);
+        aux=(String) datosEmail.getText().toString();
+        editor.putString("email_name", aux);
+        editor.apply();*/
+
         String contrasena= preferences.getString("userRodrigoPass", "1234");
 
-        if(contrasena.equals(pass.getText())){
-            user.setText(datosUser.getText());
-            email.setText(datosEmail.getText());
-        }else Toast.makeText(ConfiguracionActivity.this,R.string.error_login,Toast.LENGTH_SHORT).show();
-
-    }
-    protected void onClickIdentification(View v){
-       /* EditText user=(EditText) findViewById(R.id.user);
-        EditText pass=(EditText) findViewById(R.id.pass);
-        TextView tvUser=(TextView) findViewById(R.id.textViewUser);
-        TextView tvEmail=(TextView) findViewById(R.id.textViewEmail);
-        tvUser.setText(user.getText());
-        tvEmail.setText(pass.getText());*/
-
+        if(!contrasena.equals(pass.getText())) Toast.makeText(ConfiguracionActivity.this,R.string.error_login,Toast.LENGTH_SHORT).show();
     }
 }
