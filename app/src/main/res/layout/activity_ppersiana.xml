@@ -73,7 +73,15 @@
                         android:layout_gravity="right"
                         android:src="@drawable/bajapersiana"
                         />
-
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25%"
+                        android:id="@+id/persiana_porcenaje1"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="#00516C"
+                        android:layout_gravity="center"/>
                     <ImageView
                         android:onClick="onClickPersiana"
                         android:layout_width="109dp"
@@ -135,6 +143,15 @@
                         android:layout_gravity="right"
                         android:src="@drawable/bajapersiana"
                         />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25%"
+                        android:id="@+id/persiana_porcenaje2"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="#00516C"
+                        android:layout_gravity="center"/>
 
                     <ImageView
                         android:onClick="onClickPersiana"
@@ -197,6 +214,15 @@
                         android:layout_gravity="right"
                         android:src="@drawable/bajapersiana"
                         />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/persiana_porcenaje3"
+                        android:text="25%"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="#00516C"
+                        android:layout_gravity="center"/>
 
                     <ImageView
                         android:onClick="onClickPersiana"
@@ -259,6 +285,15 @@
                         android:layout_gravity="right"
                         android:src="@drawable/bajapersiana"
                         />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/persiana_porcenaje4"
+                        android:text="25%"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="#00516C"
+                        android:layout_gravity="center"/>
 
                     <ImageView
                         android:onClick="onClickPersiana"

@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -34,36 +35,50 @@ public class PPersianaActivity extends AppCompatActivity {
         p_3 = prefPersiana.getInt("habitacionPersiana", 50);
         p_4 = prefPersiana.getInt("invitadosPersiana", 50);
 
+        setPorcentajePersiana();
+
         if(p_1 == 0) {
             ImageView image1=(ImageView) findViewById(R.id.pbajasalon);
-            image1.setImageDrawable(getResources().getDrawable(R.drawable.bajadapersiana));}
+            image1.setImageDrawable(getResources().getDrawable(R.drawable.bajadapersiana));
+        }
         else if (p_1 == 100) {
             ImageView image1=(ImageView) findViewById(R.id.psubesalon);
             image1.setImageDrawable(getResources().getDrawable(R.drawable.subidapersiana));
-        };
+        }
         if(p_2 == 0) {
             ImageView image1=(ImageView) findViewById(R.id.pbajaCocina);
             image1.setImageDrawable(getResources().getDrawable(R.drawable.bajadapersiana));}
         else if (p_2 == 100) {
             ImageView image1=(ImageView) findViewById(R.id.psubeCocina);
             image1.setImageDrawable(getResources().getDrawable(R.drawable.subidapersiana));
-        };
+        }
         if(p_3 == 0) {
             ImageView image1=(ImageView) findViewById(R.id.pbajaHabitacion);
             image1.setImageDrawable(getResources().getDrawable(R.drawable.bajadapersiana));}
         else if (p_3 == 100) {
             ImageView image1=(ImageView) findViewById(R.id.psubeHabitacion);
             image1.setImageDrawable(getResources().getDrawable(R.drawable.subidapersiana));
-        };
+        }
         if(p_4 == 0) {
             ImageView image1=(ImageView) findViewById(R.id.pbajaInvitados);
             image1.setImageDrawable(getResources().getDrawable(R.drawable.bajadapersiana));}
         else if (p_4 == 100) {
             ImageView image1=(ImageView) findViewById(R.id.psubeInvitados);
             image1.setImageDrawable(getResources().getDrawable(R.drawable.subidapersiana));
-        };
+        }
     }
 
+    public void setPorcentajePersiana(){
+        TextView p1=(TextView)findViewById(R.id.persiana_porcenaje1);
+        TextView p2=(TextView)findViewById(R.id.persiana_porcenaje2);
+        TextView p3=(TextView)findViewById(R.id.persiana_porcenaje3);
+        TextView p4=(TextView)findViewById(R.id.persiana_porcenaje4);
+
+        p1.setText(p_1);
+        p2.setText(p_2);
+        p3.setText(p_3);
+        p4.setText(p_4);
+    }
     @Override
     public void onPause(){
         SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
@@ -72,8 +87,6 @@ public class PPersianaActivity extends AppCompatActivity {
         editor.putInt("salonPersiana", p_2);
         editor.putInt("habitacionPersiana", p_3);
         editor.putInt("invitadosPersiana", p_4);
-
-
         editor.apply();
         super.onPause();
     }
@@ -84,6 +97,7 @@ public class PPersianaActivity extends AppCompatActivity {
         p_2 = prefPersiana.getInt("salon", 50);
         p_3 = prefPersiana.getInt("habitacion", 50);
         p_4 = prefPersiana.getInt("invitados", 50);
+        setPorcentajePersiana();
         super.onResume();
     }
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+
+        android:src="@drawable/bombilla"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleActivity"
+        android:textSize="20dp"
+        android:text="@string/scroll_ilum"
+        android:gravity="center"
+        android:textColor="#00516C"
+        android:textStyle="bold" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/reciclerViewIluminacion"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleActivity"
+        android:layout_marginTop="10dp"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
