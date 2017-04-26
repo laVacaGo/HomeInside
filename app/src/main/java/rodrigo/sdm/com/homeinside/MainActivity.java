@@ -65,6 +65,10 @@ public class MainActivity extends AppCompatActivity
                 intent= new Intent(this,IluminacionActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.button_jardin:
+                intent= new Intent(this,JardinActivity.class);
+                startActivity(intent);
+                break;
             case R.id.button_config:
                 intent=new Intent(this,ConfiguracionActivity.class);
                 startActivity(intent);
@@ -158,7 +162,10 @@ public class MainActivity extends AppCompatActivity
            intent=new Intent(this,GeneralActivity.class);
            startActivity(intent);
        }
-
+       else if (id == R.id.nav_jardin) {
+           intent = new Intent(this, JardinActivity.class);
+           startActivity(intent);
+       }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

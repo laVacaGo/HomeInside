@@ -51,5 +51,10 @@
     <string name="error_login">Contraseña incorrecta</string>
     <string name="introduzca_user">Usuario</string>
     <string name="introduzca_email">eMail</string>
+
+    <string name="ph">PH de la tierra</string>
+    <string name="riego">Riego por aspersión</string>
+    <string name="humedad">Humedad de la tierra</string>
+
 </resources>
 
