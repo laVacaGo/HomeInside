@@ -38,5 +38,12 @@
     <string name="password">Contraseña</string>
     <string name="hintPassword">Introduzca su contraseña</string>
     <string name="title_activity_temperatura">Temperatura</string>
+
+    <string name="principal">PRINCIPAL</string>
+    <string name="iluminacion">ILUMINACIÓN</string>
+
+    <string name="ubicacion">Ubicación</string>
+    <string name="et_ubicacion">Introducir ubicación</string>
+    <string name="idioma">Idioma</string>
 </resources>
 

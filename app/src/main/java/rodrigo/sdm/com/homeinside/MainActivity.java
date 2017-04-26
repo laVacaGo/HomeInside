@@ -133,15 +133,23 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_about) {
            intent= new Intent(this, AboutActivity.class);
            startActivity(intent);
-        } /*else if (id == R.id.nav_camara) {
-            Intent intent=new Intent(this,CamaraActivity.class);
+        } else if (id == R.id.nav_pers) {
+           intent=new Intent(this,PPersianaActivity.class);
+           startActivity(intent);
 
-        } else if (id == R.id.nav_tools) {
-            Intent intent=new Intent(this,SettingsActivity.class);
+        } else if (id == R.id.nav_tempertura) {
+           intent=new Intent(this,TemperaturaActivity.class);
+           startActivity(intent);
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_meteo) {
+           intent=new Intent(this,WeatherActivity.class);
+           startActivity(intent);
 
-        }*/
+        }/* else if (id == R.id.nav_meteo) {
+           intent=new Intent(this,WeatherActivity.class);
+           startActivity(intent);
+
+       }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

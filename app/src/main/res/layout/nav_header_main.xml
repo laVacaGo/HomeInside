@@ -28,7 +28,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textViewUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rodrigo Irigoyen Gallego"
@@ -36,7 +36,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textViewEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="rodirgal@inf.upv.es"

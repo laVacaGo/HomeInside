@@ -8,8 +8,7 @@
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:layout_height="200dp"
-    card_view:cardElevation="10dp"
-    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="5dp"
     >
 
 

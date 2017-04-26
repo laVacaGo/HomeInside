@@ -1,20 +1,9 @@
 package rodrigo.sdm.com.homeinside;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,26 +11,36 @@ import android.widget.ImageView;
 
 public class IluminacionActivity extends AppCompatActivity {
 
-    protected boolean luz1;
-    protected boolean luz2;
-    protected boolean luz3;
-    protected boolean luz4;
-    protected boolean luz5;
-    protected boolean luz6;
-    protected boolean luz7;
-    protected boolean luz8;
+    protected boolean luz1, luz2, luz3, luz4, luz5, luz6, luz7, luz8;
+
+    /*public static final ArrayList<Iluminacion> ilum =new ArrayList<>();
+
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+
+
+    public static final ArrayList<Iluminacion> iluminacion = new ArrayList<>();*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iluminacion);
 
-        /*LayoutInflater inflater = (LayoutInflater) getApplicationContext()
-                .getSystemService(this.LAYOUT_INFLATER_SERVICE);
-        View contentView = inflater.inflate(R.layout.activity_main, null, false);
-        activity_ilumination.addView(contentView, 0);*/
+       /* mRecyclerView=(RecyclerView) findViewById(R.id.reciclerViewIluminacion);
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        mRecyclerView.setHasFixedSize(true);
+
+        mLayoutManager=new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        mAdapter=new IluminationAdapter(myDataSet);
+        mRecyclerView.setAdapter(mAdapter);*/
 
 
+
+        //Carga el estado guardado anteriormente y si no hay pone uno por defecto
         SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
         luz1=preferences.getBoolean("salon1",false);
         luz2=preferences.getBoolean("salon2",false);
@@ -84,6 +83,7 @@ public class IluminacionActivity extends AppCompatActivity {
         if(luz8) image8.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_encendida_redonda));
         else  image8.setImageDrawable(getResources().getDrawable(R.mipmap.bombilla_apagada_redonda));
     }
+
 
     @Override
     public void onPause(){
@@ -204,33 +204,5 @@ public class IluminacionActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-        Intent intent;
-
-        if (id == R.id.nav_iluminacion) {
-            intent= new Intent(this, IluminacionActivity.class);
-            startActivity(intent);
-
-        }/* else if (id == R.id.MainActivty.class) {
-
-        } else if (id == R.id.nav_persianas) {
-
-        } else if (id == R.id.nav_camara) {
-            Intent intent=new Intent(this,CamaraActivity.class);
-
-        } else if (id == R.id.nav_tools) {
-            Intent intent=new Intent(this,SettingsActivity.class);
-
-        } else if (id == R.id.nav_share) {
-
-        }*/
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
-
 
 }
