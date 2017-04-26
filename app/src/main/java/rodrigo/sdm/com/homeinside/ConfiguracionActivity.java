@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ConfiguracionActivity extends AppCompatActivity {
 
@@ -26,10 +27,26 @@ public class ConfiguracionActivity extends AppCompatActivity {
     }
     @Override
     protected void onResume(){
-
+        /*SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+        String contrasena= preferences.getString("userRodrigoPass", "");*/
         super.onResume();
     }
 
+    public void login (View view){
+        TextView user=(TextView) findViewById(R.id.textViewUser);
+        TextView email= (TextView) findViewById(R.id.textViewEmail);
+        TextView datosUser= (TextView) findViewById(R.id.user);
+        TextView datosEmail= (TextView) findViewById(R.id.email);
+        TextView pass= (TextView) findViewById(R.id.pass);
+        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+        String contrasena= preferences.getString("userRodrigoPass", "1234");
+
+        if(contrasena.equals(pass.getText())){
+            user.setText(datosUser.getText());
+            email.setText(datosEmail.getText());
+        }else Toast.makeText(ConfiguracionActivity.this,R.string.error_login,Toast.LENGTH_SHORT).show();
+
+    }
     protected void onClickIdentification(View v){
        /* EditText user=(EditText) findViewById(R.id.user);
         EditText pass=(EditText) findViewById(R.id.pass);

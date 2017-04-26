@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="rodrigo.sdm.com.homeinside">
 
-    <!--Permissions to access Internet and check the network state-->
+    <!-- Permissions to access Internet and check the network state -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -17,6 +17,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -30,20 +31,20 @@
         <activity
             android:name=".ConfiguracionActivity"
             android:label="@string/scroll_tools" />
-
-        <activity android:name=".AboutActivity"
-            android:label="@string/scroll_about"></activity>
-
-        <activity android:name=".WeatherActivity"
-            android:label="Meteorologia"></activity>
-
-        <activity android:name=".PPersianaActivity"
-            android:label="Persiana"></activity>
-
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/scroll_about" />
+        <activity
+            android:name=".WeatherActivity"
+            android:label="Meteorologia" />
+        <activity
+            android:name=".PPersianaActivity"
+            android:label="Persiana" />
         <activity
             android:name=".TemperaturaActivity"
             android:label="@string/title_activity_temperatura"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".GeneralActivity"></activity>
     </application>
 
 </manifest>

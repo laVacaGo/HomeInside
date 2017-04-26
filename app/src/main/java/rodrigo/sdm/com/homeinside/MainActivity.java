@@ -1,7 +1,9 @@
 package rodrigo.sdm.com.homeinside;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -13,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import static rodrigo.sdm.com.homeinside.R.id.button_meteo;
 
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     public void buttonOnClicked(View v){
@@ -53,6 +58,8 @@ public class MainActivity extends AppCompatActivity
         Intent intent;
         switch (id){
             case R.id.button_general:
+                intent= new Intent(this,GeneralActivity.class);
+                startActivity(intent);
                 break;
             case R.id.button_iluminacion:
                 intent= new Intent(this,IluminacionActivity.class);
@@ -81,6 +88,8 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
+
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -145,11 +154,10 @@ public class MainActivity extends AppCompatActivity
            intent=new Intent(this,WeatherActivity.class);
            startActivity(intent);
 
-        }/* else if (id == R.id.nav_meteo) {
-           intent=new Intent(this,WeatherActivity.class);
+        } else if (id == R.id.nav_general) {
+           intent=new Intent(this,GeneralActivity.class);
            startActivity(intent);
-
-       }*/
+       }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
