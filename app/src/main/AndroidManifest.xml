@@ -44,7 +44,10 @@
             android:name=".TemperaturaActivity"
             android:label="@string/title_activity_temperatura"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".GeneralActivity"></activity>
+        <activity android:name=".GeneralActivity"
+            android:label="@string/scroll_general"/>
+        <activity android:name=".JardinActivity"
+            android:label="@string/scroll_jardin"></activity>
     </application>
 
 </manifest>
